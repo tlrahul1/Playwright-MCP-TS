@@ -1,55 +1,102 @@
-!! Playwright TypeScript Automation Framework !!
+🧪 Playwright MCP Automation Framework (TypeScript)
+📌 Overview
 
-This project demonstrates an end-to-end automation framework built using **Playwright with TypeScript**, enhanced with intelligent test automation tools like:
+This project is an advanced end-to-end test automation framework built using Playwright with TypeScript, enhanced with MCP (Model Context Protocol) agents for intelligent test generation, planning, and healing.
 
-- Playwright Test Agent  
-- Test Generator  
-- Test Healer  
+It automates core user workflows of the SauceDemo application, ensuring reliability, scalability, and maintainability.
 
----
+🚀 Tech Stack
+Playwright (TypeScript)
+Node.js
+MCP (Model Context Protocol) Agents
+GitHub Actions (CI-ready)
+HTML Reporting
+🧠 MCP Agent Integration
 
-Project Overview
+This framework leverages MCP-powered agents to improve automation efficiency:
 
-This framework automates key user flows of the SauceDemo application including:
+Test Planner Agent – Generates structured test plans
+Test Generator Agent – Creates Playwright test cases
+Test Healer Agent – Fixes flaky/broken tests
 
-- Login (valid & invalid scenarios)
-- Add to Cart
-- Remove from Cart
-- Sort Products
-- View Cart
+Location:
 
----
+.github/agents/
+📂 Project Structure
+project-root/
+│
+├── specs/                      # Test specifications (TS)
+│   ├── login-successful.spec.ts
+│   ├── login-invalid-credentials.spec.ts
+│   ├── login-locked-out.spec.ts
+│   ├── browse-products.spec.ts
+│   ├── add-to-cart.spec.ts
+│   ├── remove-from-cart.spec.ts
+│   ├── view-cart.spec.ts
+│   └── sort-products.spec.ts
+│
+├── .github/
+│   ├── agents/                # MCP agent configurations
+│   └── workflows/             # CI setup
+│
+├── .vscode/
+│   └── mcp.json               # MCP configuration
+│
+├── playwright.config.ts       # Playwright config
+├── seed.spec.ts               # Seed / setup test
+├── test-plan.md               # Test planning document
+├── package.json
+└── README.md
+📊 Test Coverage
+Covered Scenarios:
+Login (Successful, Invalid, Locked-out)
+Product Browsing
+Add to Cart
+Remove from Cart
+View Cart
+Product Sorting
+⚙️ Prerequisites
+Node.js (v16 or higher)
+npm
 
-Tech Stack
+Verify:
 
-- Playwright
-- TypeScript
-- Node.js
-
----
-
-Project Structure
-
-├── specs/ # Test cases
-├── playwright.config.ts # Configuration file
-├── test-plan.md # Test planning
-├── seed.spec.ts # Seed test
-├── .github/agents # AI test agents
-
----
-
-Setup Instructions
-
-```bash
+node -v
+npm -v
+⚙️ Setup Instructions
+1. Clone Repository
+git clone https://github.com/muzaffar-nafees/AutomationMCP
+cd Playwright-MCP-TS-main
+2. Install Dependencies
 npm install
+3. Install Playwright Browsers
 npx playwright install
-
-## Run Tests ##
-
+▶️ Run Tests
+Run all tests
 npx playwright test
-
-----
-
-## Test Reports ##
-
+Run in headed mode
+npx playwright test --headed
+Run specific test
+npx playwright test specs/<file-name>.spec.ts
+📊 Reports
+Open HTML Report
 npx playwright show-report
+Report Folder
+playwright-report/
+🔄 CI/CD Integration
+
+GitHub Actions workflow is available in:
+
+.github/workflows/
+💡 Key Features
+TypeScript-based Playwright framework
+MCP-powered intelligent test automation
+Scalable and modular structure
+CI/CD ready (GitHub Actions)
+Cross-browser support
+Detailed HTML reports
+🎯 Highlights
+Automated real-world e2e scenarios
+Intelligent test generation via MCP
+Clean and maintainable architecture
+CI-ready automation setup
