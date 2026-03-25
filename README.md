@@ -5,12 +5,17 @@ This project is an advanced end-to-end test automation framework built using Pla
 
 It automates core user workflows of the SauceDemo application, ensuring reliability, scalability, and maintainability.
 
+---
+
 🚀 Tech Stack
 Playwright (TypeScript)
 Node.js
 MCP (Model Context Protocol) Agents
 GitHub Actions (CI-ready)
 HTML Reporting
+
+---
+
 🧠 MCP Agent Integration
 
 This framework leverages MCP-powered agents to improve automation efficiency:
@@ -22,31 +27,9 @@ Test Healer Agent – Fixes flaky/broken tests
 Location:
 
 .github/agents/
-📂 Project Structure
-project-root/
-│
-├── specs/                      # Test specifications (TS)
-│   ├── login-successful.spec.ts
-│   ├── login-invalid-credentials.spec.ts
-│   ├── login-locked-out.spec.ts
-│   ├── browse-products.spec.ts
-│   ├── add-to-cart.spec.ts
-│   ├── remove-from-cart.spec.ts
-│   ├── view-cart.spec.ts
-│   └── sort-products.spec.ts
-│
-├── .github/
-│   ├── agents/                # MCP agent configurations
-│   └── workflows/             # CI setup
-│
-├── .vscode/
-│   └── mcp.json               # MCP configuration
-│
-├── playwright.config.ts       # Playwright config
-├── seed.spec.ts               # Seed / setup test
-├── test-plan.md               # Test planning document
-├── package.json
-└── README.md
+
+---
+
 📊 Test Coverage
 Covered Scenarios:
 Login (Successful, Invalid, Locked-out)
@@ -63,14 +46,20 @@ Verify:
 
 node -v
 npm -v
+
+---
+
 ⚙️ Setup Instructions
 1. Clone Repository
-git clone https://github.com/muzaffar-nafees/AutomationMCP
+https://github.com/tlrahul1/Playwright-MCP-TS
 cd Playwright-MCP-TS-main
 2. Install Dependencies
 npm install
 3. Install Playwright Browsers
 npx playwright install
+
+---
+
 ▶️ Run Tests
 Run all tests
 npx playwright test
@@ -78,6 +67,9 @@ Run in headed mode
 npx playwright test --headed
 Run specific test
 npx playwright test specs/<file-name>.spec.ts
+
+---
+
 📊 Reports
 Open HTML Report
 npx playwright show-report
@@ -88,6 +80,9 @@ playwright-report/
 GitHub Actions workflow is available in:
 
 .github/workflows/
+
+---
+
 💡 Key Features
 TypeScript-based Playwright framework
 MCP-powered intelligent test automation
